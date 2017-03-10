@@ -17,12 +17,12 @@ namespace CodeDsAndAlgos.DataStructures
             IsDirected = _isDirected;
         }
 
-        public void AddEdge(int _id1, T _data1, int _id2, T _data2)
+        public virtual void AddEdge(int _id1, T _data1, int _id2, T _data2)
         {
             this.AddEdge(_id1, _data1, _id2, _data2, 0);
         }
         
-        public void AddEdge(int _id1,T _data1, int _id2, T _data2,int _weight)
+        public virtual void AddEdge(int _id1,T _data1, int _id2, T _data2,int _weight)
         {
             Vertex<T> start,end ;
 
@@ -120,7 +120,7 @@ namespace CodeDsAndAlgos.DataStructures
             AdjacencyList.Add(_vertex);
         }
 
-        public IEnumerable<Vertex<T>> GetAdjacencyList(Vertex<T> _vertex)
+        public IEnumerable<Vertex<T>> GetAdjacencyList()
         {
             return AdjacencyList;
         }
