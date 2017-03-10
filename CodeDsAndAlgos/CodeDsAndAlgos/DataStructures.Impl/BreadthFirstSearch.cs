@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CodeDsAndAlgos.DataStructures.Impl
 {
-   public class DepthFirstSearch<T>
+   public class BreadthFirstSearch<T>
     {
         private bool[] visited;
         private Graph<T> graph;
         private int sourceVertexId;
 
-        public DepthFirstSearch(Graph<T> _graph, int _sourceVertexId)
+        public BreadthFirstSearch(Graph<T> _graph, int _sourceVertexId)
         {
             visited = new bool[_graph.GetVertices().Count()];
             graph = _graph;

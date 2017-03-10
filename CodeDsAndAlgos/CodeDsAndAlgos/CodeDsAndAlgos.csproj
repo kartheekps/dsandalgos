@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataStructures.Impl\DepthFirstSearch.cs" />
+    <Compile Include="DataStructures.Impl\BreadthFirstSearch.cs" />
     <Compile Include="DataStructures\Graph.cs" />
     <Compile Include="DataStructures\SymbolGraph.cs" />
     <Compile Include="Program.cs" />
