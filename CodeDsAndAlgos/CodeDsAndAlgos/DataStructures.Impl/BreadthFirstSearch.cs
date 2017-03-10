@@ -8,15 +8,19 @@ namespace CodeDsAndAlgos.DataStructures.Impl
 {
    public class BreadthFirstSearch<T>
     {
-        private bool[] visited;
+        private HashSet<int> visited;
         private Graph<T> graph;
         private int sourceVertexId;
 
         public BreadthFirstSearch(Graph<T> _graph, int _sourceVertexId)
         {
-            visited = new bool[_graph.GetVertices().Count()];
+            visited = new HashSet<int>();
             graph = _graph;
             sourceVertexId = _sourceVertexId;
+        }
+        public BreadthFirstSearch(Graph<T> _graph, Vertex<T> _sourceVertex)
+            : this(_graph,_sourceVertex.Id)
+        {        
         }
 
         public void Search()
@@ -24,12 +28,10 @@ namespace CodeDsAndAlgos.DataStructures.Impl
             Vertex<T> sourceVertex = graph.GetVertex(sourceVertexId);
             if (sourceVertex == null)
                 return;
-            for (int i = 0; i < visited.Count(); i++)
-                visited[i] = false;
 
             Queue<Vertex<T>> queue = new Queue<Vertex<T>>(graph.GetVertices().Count());            
             queue.Enqueue(sourceVertex);
-            visited[sourceVertex.Id] = true;
+            visited.Add(sourceVertex.Id);
 
             while (queue.Count != 0)
             {
@@ -40,9 +42,9 @@ namespace CodeDsAndAlgos.DataStructures.Impl
 
                 foreach (Vertex<T> adjVertex in front.GetAdjacencyList())
                 {
-                    if (!visited[adjVertex.Id])
+                    if (!visited.Add(adjVertex.Id))
                     {
-                        visited[adjVertex.Id] = true;
+                        visited.Add(adjVertex.Id);
                         queue.Enqueue(adjVertex);
                     }                        
                 }
