@@ -84,7 +84,7 @@ namespace CodeDsAndAlgos.DataStructures
             else if (Weight < other.Weight)
                 return -1;
             else
-                return 0;
+                return 1;
         }
 
         public Vertex<T> GetEither()
