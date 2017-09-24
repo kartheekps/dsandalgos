@@ -44,15 +44,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataStructures.Impl\BreadthFirstSearch.cs" />
-    <Compile Include="DataStructures.Impl\DepthFirstSearch.cs" />
-    <Compile Include="DataStructures\Graph.cs" />
-    <Compile Include="DataStructures\SymbolGraph.cs" />
+    <Compile Include="Algorithms\Dynamic Programming\FibbonaciSeries.cs" />
+    <Compile Include="Algorithms\Dynamic Programming\MatrixOperations.cs" />
+    <Compile Include="Algorithms\Dynamic Programming\MinNoOfJumps.cs" />
+    <Compile Include="Algorithms\Dynamic Programming\RodCutting.cs" />
+    <Compile Include="Algorithms\Dynamic Programming\StockBuySellKTransactions .cs" />
+    <Compile Include="DataStructures.Impl\Graphs\BreadthFirstSearch.cs" />
+    <Compile Include="DataStructures.Impl\Graphs\DepthFirstSearch.cs" />
+    <Compile Include="DataStructures\Graphs\Graph.cs" />
+    <Compile Include="DataStructures\Graphs\SymbolGraph.cs" />
+    <Compile Include="DataStructures\LinkedLists\LinkedList.cs" />
+    <Compile Include="DataStructures\LinkedLists\LinkedListNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="DataStructures.Impl\LinkedLists\LinkedListLoops.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

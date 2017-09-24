@@ -12,6 +12,7 @@ namespace CodeDsAndAlgos.DataStructures.Impl
         private Dictionary<int,int> parent;
         private Graph<T> graph;
         private int sourceVertexId;
+        private Stack<T> reverseOrder;
 
         public DepthFirstSearch(Graph<T> _graph,int _sourceVertexId)
         {
@@ -19,6 +20,7 @@ namespace CodeDsAndAlgos.DataStructures.Impl
             visited = new HashSet<int>();
             parent = new Dictionary<int, int>(graph.GetVertices().Count());
             sourceVertexId = _sourceVertexId;
+            reverseOrder = new Stack<T>(graph.GetVertices().Count());
         }
 
         public void Search()
@@ -45,6 +47,36 @@ namespace CodeDsAndAlgos.DataStructures.Impl
                     DFSUtil(adjVertex);
                 }
             }
+            reverseOrder.Push(_vertex.Data);
+        }
+
+        public void IterativeSearch(Vertex<T> _vertex)
+        {
+            visited.Clear();
+
+            Stack<Vertex<T>> stack = new Stack<Vertex<T>>();
+            stack.Push(_vertex);
+            
+            while (stack.Count > 0)
+            {
+                Vertex<T> top = stack.Pop();
+                visited.Add(top.Id);
+
+                foreach (Vertex<T> adjVertex in top.GetAdjacencyList())
+                {
+                    if(!visited.Contains(adjVertex.Id))
+                        stack.Push(adjVertex);
+                }
+            }
+        }
+
+        public IEnumerable<T> GetTopologicalOrder()
+        {
+            if (reverseOrder.Count == 0)
+            {
+                this.Search();
+            }                
+            return reverseOrder;
         }
     }
 }

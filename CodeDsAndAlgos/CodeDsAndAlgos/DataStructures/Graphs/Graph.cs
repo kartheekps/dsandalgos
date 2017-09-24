@@ -15,6 +15,8 @@ namespace CodeDsAndAlgos.DataStructures
         public Graph(bool _isDirected)
         {
             IsDirected = _isDirected;
+            Vertices = new Dictionary<int, Vertex<T>>();
+            Edges = new List<Edge<T>>();
         }
 
         public virtual void AddEdge(int _id1, T _data1, int _id2, T _data2)
@@ -23,7 +25,7 @@ namespace CodeDsAndAlgos.DataStructures
         }
         
         public virtual void AddEdge(int _id1,T _data1, int _id2, T _data2,int _weight)
-        {
+        {            
             Vertex<T> start,end ;
 
             if (Vertices.ContainsKey(_id1))
@@ -41,7 +43,6 @@ namespace CodeDsAndAlgos.DataStructures
                 end = new Vertex<T>(_id2, _data2);
                 Vertices.Add(_id2, end);
             }
-
             Edge<T> edge = new Edge<T>(start, end, _weight);
             Edges.Add(edge);
             start.AddAdjancentVertex(end, edge);
@@ -112,6 +113,8 @@ namespace CodeDsAndAlgos.DataStructures
         {
             Id = _id;
             Data = _data;
+            Edges = new List<Edge<T>>();
+            AdjacencyList = new List<Vertex<T>>();
         }
 
         public void AddAdjancentVertex(Vertex<T> _vertex,Edge<T> _edge)
