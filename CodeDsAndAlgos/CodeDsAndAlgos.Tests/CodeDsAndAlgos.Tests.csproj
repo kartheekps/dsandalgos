@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tests\Dynamic Programming\FibbonaciSeriesTests.cs" />
+    <Compile Include="Tests\Dynamic Programming\LongestCommonSubsequenceTests.cs" />
     <Compile Include="Tests\Dynamic Programming\MinNoOfJumpsTests.cs" />
     <Compile Include="Tests\GraphsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
