@@ -10,6 +10,7 @@ namespace CodeDsAndAlgos.DataStructures
         public T Value { get; set; }
         public LinkedList<T> List { get; internal set; }
         public LinkedListNode<T> Previous { get; set; }
+        public LinkedListNode<T> Random { get; set; }
 
         public LinkedListNode(T _data)
         {

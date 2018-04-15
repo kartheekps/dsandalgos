@@ -10,7 +10,7 @@ namespace CodeDsAndAlgos.DataStructures
     {
        private int top = -1;       
        private const int capacity = 10;
-       T[] data = new T[capacity];
+       private T[] data = new T[capacity];
 
         public void Push(T item)
         {
@@ -33,9 +33,11 @@ namespace CodeDsAndAlgos.DataStructures
             if (IsEmpty())
                 throw new Exception("Stack is Empty");
 
-            data[top] = default(T);
+            T item = data[top];
 
-            return data[top--];
+            data[top--] = default(T);
+
+            return item;
         }
 
         public bool IsEmpty()

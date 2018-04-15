@@ -12,7 +12,7 @@ namespace CodeDsAndAlgos.DataStructures.Impl
         private Dictionary<int,int> parent;
         private Graph<T> graph;
         private int sourceVertexId;
-        private Stack<T> reverseOrder;
+        private System.Collections.Generic.Stack<T> reverseOrder;
 
         public DepthFirstSearch(Graph<T> _graph,int _sourceVertexId)
         {
@@ -20,7 +20,7 @@ namespace CodeDsAndAlgos.DataStructures.Impl
             visited = new HashSet<int>();
             parent = new Dictionary<int, int>(graph.GetVertices().Count());
             sourceVertexId = _sourceVertexId;
-            reverseOrder = new Stack<T>(graph.GetVertices().Count());
+            reverseOrder = new System.Collections.Generic.Stack<T>(graph.GetVertices().Count());
         }
 
         public void Search()
@@ -57,7 +57,7 @@ namespace CodeDsAndAlgos.DataStructures.Impl
             Stack<Vertex<T>> stack = new Stack<Vertex<T>>();
             stack.Push(_vertex);
             
-            while (stack.Count > 0)
+            while (stack.Count() > 0)
             {
                 Vertex<T> top = stack.Pop();
                 visited.Add(top.Id);
@@ -72,7 +72,7 @@ namespace CodeDsAndAlgos.DataStructures.Impl
 
         public IEnumerable<T> GetTopologicalOrder()
         {
-            if (reverseOrder.Count == 0)
+            if (reverseOrder.Count() == 0)
             {
                 this.Search();
             }                

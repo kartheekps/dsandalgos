@@ -15,7 +15,11 @@ namespace CodeDsAndAlgos.DataStructures
     {
         public LinkedListNode<T> Head { get; set; }
         private int count = 0;
-        public int Count { get { return count; } set { count = value; } }
+        public int Count { get { return count; } private set { count = value; } }
+
+        public LinkedList()
+        {           
+        }
         public LinkedList(LinkedListNode<T> _head)
         {          
             Head = _head;
@@ -99,6 +103,7 @@ namespace CodeDsAndAlgos.DataStructures
         public void Remove(T _data)
         {
             LinkedListNode<T> node = this.Find(_data);
+            InternalRemoveNode(node);
         }
 
         private void InternalRemoveNode(LinkedListNode<T> node)

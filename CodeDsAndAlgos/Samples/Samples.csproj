@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5046D4AB-FB98-451A-AC92-2F00C415433C}</ProjectGuid>
+    <ProjectGuid>{AEA26119-A91C-4A0D-AD1F-7DD7CCCF1944}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodeDsAndAlgos</RootNamespace>
-    <AssemblyName>CodeDsAndAlgos</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Samples</RootNamespace>
+    <AssemblyName>Samples</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -22,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,36 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\Dynamic Programming\FibbonaciSeries.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\LongestCommonSubsequence.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\MatrixOperations.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\MinNoOfJumps.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\RodCutting.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\StockBuySellKTransactions .cs" />
-    <Compile Include="Algorithms\RainWaterTrapping.cs" />
-    <Compile Include="DataStructures.Impl\Graphs\BreadthFirstSearch.cs" />
-    <Compile Include="DataStructures.Impl\Graphs\DepthFirstSearch.cs" />
-    <Compile Include="DataStructures.Impl\LinkedLists\Utils.cs" />
-    <Compile Include="DataStructures\Graphs\Graph.cs" />
-    <Compile Include="DataStructures\Graphs\SymbolGraph.cs" />
-    <Compile Include="DataStructures\LinkedLists\LinkedList.cs" />
-    <Compile Include="DataStructures\LinkedLists\LinkedListNode.cs" />
-    <Compile Include="DataStructures\Queues\Queue.cs" />
-    <Compile Include="DataStructures\Stacks\Stack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Compile Include="DataStructures.Impl\LinkedLists\LinkedListLoops.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

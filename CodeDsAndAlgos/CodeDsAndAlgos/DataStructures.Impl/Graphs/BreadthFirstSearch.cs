@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CodeDsAndAlgos.DataStructures.Impl
 {
    public class BreadthFirstSearch<T>
@@ -29,7 +30,9 @@ namespace CodeDsAndAlgos.DataStructures.Impl
             if (sourceVertex == null)
                 return;
 
-            Queue<Vertex<T>> queue = new Queue<Vertex<T>>(graph.GetVertices().Count());            
+            System.Collections.Generic.Queue<Vertex<T>> queue = 
+                new System.Collections.Generic.Queue<Vertex<T>>(graph.GetVertices().Count()); 
+            
             queue.Enqueue(sourceVertex);
             visited.Add(sourceVertex.Id);
 
