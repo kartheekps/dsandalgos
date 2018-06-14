@@ -44,22 +44,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\Arrays\RemoveDuplicates.cs" />
+    <Compile Include="Algorithms\Arrays\Rotation.cs" />
+    <Compile Include="Algorithms\Cache\LRUCache.cs" />
     <Compile Include="Algorithms\Dynamic Programming\FibbonaciSeries.cs" />
     <Compile Include="Algorithms\Dynamic Programming\LongestCommonSubsequence.cs" />
     <Compile Include="Algorithms\Dynamic Programming\MatrixOperations.cs" />
     <Compile Include="Algorithms\Dynamic Programming\MinNoOfJumps.cs" />
     <Compile Include="Algorithms\Dynamic Programming\RodCutting.cs" />
     <Compile Include="Algorithms\Dynamic Programming\StockBuySellKTransactions .cs" />
+    <Compile Include="Algorithms\MyCalendarTwo.cs" />
     <Compile Include="Algorithms\RainWaterTrapping.cs" />
     <Compile Include="DataStructures.Impl\Graphs\BreadthFirstSearch.cs" />
     <Compile Include="DataStructures.Impl\Graphs\DepthFirstSearch.cs" />
     <Compile Include="DataStructures.Impl\LinkedLists\Utils.cs" />
     <Compile Include="DataStructures\Graphs\Graph.cs" />
     <Compile Include="DataStructures\Graphs\SymbolGraph.cs" />
+    <Compile Include="DataStructures\Heaps\IndexedMinHeap.cs" />
+    <Compile Include="DataStructures\Heaps\MaxHeap.cs" />
     <Compile Include="DataStructures\LinkedLists\LinkedList.cs" />
     <Compile Include="DataStructures\LinkedLists\LinkedListNode.cs" />
+    <Compile Include="DataStructures\Heaps\MinHeap.cs" />
     <Compile Include="DataStructures\Queues\Queue.cs" />
     <Compile Include="DataStructures\Stacks\Stack.cs" />
+    <Compile Include="DataStructures\Tries\Trie.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
