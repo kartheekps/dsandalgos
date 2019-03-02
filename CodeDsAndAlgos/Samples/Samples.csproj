@@ -44,8 +44,14 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Class2.cs" />
+    <Compile Include="Connections.cs" />
+    <Compile Include="CurrencyArbitage.cs" />
+    <Compile Include="FlightPaths.cs" />
     <Compile Include="MFS.cs" />
     <Compile Include="MinHeap.cs" />
+    <Compile Include="NetworkFailures.cs" />
+    <Compile Include="NetworkWires.cs" />
+    <Compile Include="Paths.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
